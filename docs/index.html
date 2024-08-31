@@ -62,9 +62,9 @@
                   <span class="author-block">
                     <a href="https://github.com/FuBin29" target="_blank">Bin Fu</a><sup>*</sup>,</span>
                   <span class="author-block">
-                    <a href="" target="_blank">Chuyan Xiong</a>
+                    <a href="" target="_blank">Chuyan Xiong</a>,</span>
                   <span class="author-block">
-                    <a href="https://rpwang.net" target="_blank">Ruiping Wang</a>
+                    <a href="https://rpwang.net" target="_blank">Ruiping Wang</a>,</span>
                   <span class="author-block">
                     <a href="http://vipl.ict.ac.cn/people/_xlchen/" target="_blank">Xilin Chen</a>
                   </span>
@@ -135,11 +135,12 @@
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <source src="static/videos/teaser_video_comp_1.5x.mp4"
+        <source src="static/videos/r2c_1.5x.mp4"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        We unlock LLM as low-level action planner by mapping the room into a semantic chessboard, which we call Room to Chessboard (R2C). 
+        It provides a communication platform between LLM and Robot. Robot can convey room state to LLM, and LLM can perform low-level action plannning by playing chess.
       </h2>
     </div>
   </div>
@@ -171,32 +172,25 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/fig1.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          The comparison between LLM as a high-level planner and as a low-level planner. Most existing methods rely solely on LLM as a high-level planner. the robot cannot effectively convey spatial information to LLM, resulting in LLM only being able to perform basic task decomposition.(upper) The R2C framework transforms the real environment into a chessboard that both LLM and the robot can understand, turning embodied tasks into a chess game. LLM can then engage in low-level planning based on the grid information of the chessboard.(bellow)
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/fig2.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Overview of R2C: After high-level planning, environmental information is transformed into a grid-based chessboard by the Environment Filter. Subsequently, this textual chessboard, along with the task rules, forms the prompt input for either a zero-shot or CoT fine-tuned LLM. Finally, the LLM predicts the next position, which is then executed by the robot to obtain new visual information, thereby completing the loop.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/fig3.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+         Case study for R2C. The red lines on the chessboard are trajectories predicted by LLM, where each key point is marked with circles. We visualize the HLP and LLP process at steps 8, 15, and 34 in detail.
        </h2>
      </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
   </div>
 </div>
 </div>
@@ -259,25 +253,6 @@
   </div>
 </section>
 <!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
 
 
 <!--BibTex citation -->
